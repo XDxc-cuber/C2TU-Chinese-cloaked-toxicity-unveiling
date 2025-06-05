@@ -1,0 +1,26 @@
+{
+    "llama": {
+        "path": "llms/llama3-8B",
+        "head_start": "<|start_header_id|>",
+        "head_end": "<|end_header_id|>",
+        "eot_id": "<|eot_id|>"
+    },
+    "qwen": {
+        "path": "llms/Qwen7B",
+        "head_start": "<|im_start|>",
+        "head_end": "\n",
+        "eot_id": "<|im_end|>"
+    },
+    "qwen14": {
+        "path": "llms/Qwen14B",
+        "head_start": "<|im_start|>",
+        "head_end": "\n",
+        "eot_id": "<|im_end|>"
+    },
+    "baichuan7": {
+        "path": "llms/Baichuan2-7B-Base"
+    },
+    "baichuan13": {
+        "path": "llms/Baichuan2-13B-Base"
+    }
+}

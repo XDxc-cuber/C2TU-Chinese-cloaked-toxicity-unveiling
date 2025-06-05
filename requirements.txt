@@ -1,0 +1,17 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+networkx=3.2.1
+numpy=1.26.4
+openai=1.51.0
+pandas=2.2.3
+pypinyin=0.53.0
+pypinyin-dict=0.9.0
+scikit-learn=1.1.1
+scipy=1.13.1
+six=1.16.0
+torch=2.4.1
+tqdm=4.66.5
+transformers=4.45.1
+websockets=12.0
+

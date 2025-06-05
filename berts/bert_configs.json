@@ -1,0 +1,5 @@
+{
+    "bert-base-chinese": {
+        "path": "../bert-base-chinese"
+    },
+}
