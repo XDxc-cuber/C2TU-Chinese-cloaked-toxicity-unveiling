@@ -43,8 +43,8 @@ You can simply run [test.py](test.py) to show a tiny demo.
 python test.py
 
 >>>
-Input: 你这个沙币，继续舔你的嘿贵去吧！
-Output: 你这个傻逼，继续舔你的黑鬼去吧！
+Input: 你这个社会辣鸡，简直是个沙比！
+Output: 你这个社会垃圾，简直是个傻逼！
 ```
 
 ## Results
