@@ -6,6 +6,7 @@ pypinyin==0.53.0
 pypinyin-dict==0.9.0
 scikit-learn==1.1.1
 scipy==1.13.1
+sentencepiece==0.2.0
 six==1.16.0
 torch==2.4.1
 tqdm==4.66.5
