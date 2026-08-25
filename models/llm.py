@@ -11,7 +11,6 @@ class LLM_model():
         self.model = AutoModelForCausalLM.from_pretrained(
             llm_path,
             torch_dtype=torch.bfloat16,
-            use_cache=True,
             trust_remote_code=True,
         ).to(device)
         self.device = device

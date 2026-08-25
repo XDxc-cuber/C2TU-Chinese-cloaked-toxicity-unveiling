@@ -657,7 +657,7 @@ class AutoLMModel:
                 return ChatQwenModel(model, *args, **kwargs)
             elif "llama" in model.lower():
                 return ChatLlamaModel(model, *args, **kwargs)
-            elif "Baichuan2" in model:
+            elif "baichuan" in model.lower():
                 return ChatBaichuanModel(model, *args, **kwargs)
             elif "internlm2" in model.lower():
                 return ChatInternLM2Model(model, *args, **kwargs)
@@ -670,7 +670,7 @@ class AutoLMModel:
                 return QwenModel(model, *args, **kwargs)
             elif "llama" in model.lower():
                 return LlamaModel(model, *args, **kwargs)
-            elif "Baichuan2" in model:
+            elif "baichuan" in model.lower():
                 return BaichuanModel(model, *args, **kwargs)
             elif "internlm2" in model.lower():
                 return InternLM2Model(model, *args, **kwargs)

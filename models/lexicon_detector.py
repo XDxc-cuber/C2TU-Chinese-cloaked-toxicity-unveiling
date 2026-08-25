@@ -1,10 +1,16 @@
 from homoGraphs.homoGraph import HomoGraph
+from homoGraphs.shapeGraph import ShapeGraph
 
 
 class DetectorModel():
     def __init__(self, homoGraph_path):
-        homoGraph = HomoGraph(homoGraph_path)
-        self.homoGraph = homoGraph
+        is_shape = "shape" in homoGraph_path
+        if is_shape:
+            shapeGraph = ShapeGraph(homoGraph_path)
+            self.homoGraph = shapeGraph
+        else:
+            homoGraph = HomoGraph(homoGraph_path)
+            self.homoGraph = homoGraph
 
     def detectLexicons(self, text: str):
         N = len(text)

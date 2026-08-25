@@ -1,5 +1,5 @@
 # C2TU-Chinese-cloaked-toxicity-unveiling
-Source code of paper [Breaking the Cloak! Unveiling Chinese Cloaked Toxicity with Homophone Graph and Toxic Lexicon](https://arxiv.org/abs/2505.22184)
+Source code of paper **Breaking the Cloak! Unveiling Chinese Cloaked Toxicity with Homophone Graph and Toxic Lexicon**
 
 ## Introduction
 
@@ -17,11 +17,7 @@ Our contributions are:
 
 * Clone the repository to the local environment
 
-```shell
-git clone https://github.com/XDxc-cuber/C2TU-Chinese-cloaked-toxicity-unveiling.git
 
-cd C2TU-Chinese-cloaked-toxicity-unveiling/
-```
 
 * Create new environment for C2TU
 

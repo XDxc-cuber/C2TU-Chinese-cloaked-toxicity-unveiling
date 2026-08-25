@@ -18,9 +18,15 @@
         "eot_id": "<|im_end|>"
     },
     "baichuan7": {
-        "path": "llms/Baichuan2-7B-Base"
+        "path": "/mnt/cfs_algo_bj/models/experiments/maxuchen/models/Baichuan/"
     },
     "baichuan13": {
         "path": "llms/Baichuan2-13B-Base"
+    },
+    "qwen3_5_4b": {
+        "path": "/mnt/cfs_algo_bj/models/opensource_model/Qwen/Qwen3.5-4B"
+    },
+    "qwen3_5_9b": {
+        "path": "/mnt/cfs_algo_bj/models/opensource_model/Qwen/Qwen3.5-9B"
     }
 }

@@ -216,7 +216,7 @@ def char_metric_det_(all_srcs, all_pres, all_trgs):
 def read_datas(data_path):
     datas = []
     with open(data_path, "r", encoding="utf-8") as f:
-        datas = json.loads(f.readlines()[0])
+        datas = json.load(f)
     return datas
 
 def eval_denoisy(base_path, key_path, eval_path):
@@ -245,16 +245,22 @@ def eval_denoisy(base_path, key_path, eval_path):
     
 
 if __name__ == "__main__":
-    #base_path = "datas/COLD/COLD_base.json"
-    #noise_path = "datas/COLD/COLD_key.json"
+    # base_path = "datas/COLD/COLD_base.json"
+    # noise_path = "datas/COLD/COLD_key.json"
     base_path = "datas/ToxicloakCN/Toxic_base.json"
-    noise_path = "datas/ToxicloakCN/Toxic_key.json"
+    noise_path = "datas/ToxicloakCN/ToxiCN_shape_key.json"
+    # base_path = "datas/Toxic_rest/Toxic_real_world_dn.json"
+    # noise_path = "datas/Toxic_rest/Toxic_real_world.json"
     
-    #eval_path = "datas/processed_data/COLD/"
+    # eval_path = "datas/processed_data/COLD/"
     eval_path = "datas/processed_data/ToxicloakCN/"
     
     import os
-    eval_datas = os.listdir(eval_path)
+    full_eval_datas = os.listdir(eval_path)
+    eval_datas = []
+    for path in full_eval_datas:
+        if "qwen3_5_9" in path:
+            eval_datas.append(path)
     
     result = {}
     for eval_data in eval_datas:
@@ -267,7 +273,7 @@ if __name__ == "__main__":
                 result[path].append(x)
         print()
     
-    with open("result.csv", "w") as f:
+    with open("result_qwen_toxicn.csv", "w") as f:
         f.write(
             "model,SD-A,SD-P,SD-R,SD-F,SC-A,SC-P,SC-R,SC-F,CD-A,CD-P,CD-R,CD-F,CC-A,CC-P,CC-R,CC-F,CD-TP,CD-FP,CD-FN,CD-TN,CC-TP,CC-FP,CC-FN,CC-TN,\n")
         for key, value in result.items():

@@ -20,9 +20,9 @@ if __name__ == "__main__":
     bert_name = "bert-base-chinese"
    
 ##############################################################################
-    homograph_path = "homoGraphs/COLD_homoGraph"
-    data_path = "datas/COLD/COLD_key.json"
-    output_path = "datas/processed_data/COLD/"
+    homograph_path = "homoGraphs/ToxiCN_homoGraph"
+    data_path = "datas/badcase.json"
+    output_path = "datas/processed_data/"
 
     for llm_name in llm_names:
         llm_model = LLM_model(llm_configs[llm_name], device=DEVICE)

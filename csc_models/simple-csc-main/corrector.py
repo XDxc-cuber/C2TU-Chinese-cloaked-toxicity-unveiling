@@ -4,21 +4,23 @@ import json
 import time
 
 corrector = LMCorrector(
-    model="../../llms/Baichuan2-7B-Base",
+    model="/mnt/cfs_algo_bj/models/experiments/maxuchen/Baichuan",
     # Suggested to use the same model for model and prompted_model. In this way, we only need to load the model once.
-    prompted_model="../../llms/Baichuan2-7B-Base",
+    prompted_model="/mnt/cfs_algo_bj/models/experiments/maxuchen/Baichuan",
     # You can always use the default config file to disable the insert and delete operations.
-    config_path="configs/default_config.yaml",
+    config_path="/mnt/cfs_algo_bj/workspace/maxuchen/C2TU-main/csc_models/simple-csc-main/configs/default_config.yaml",
     # the default torch_dtype is torch.float16, but it will lead unexpected errors when using Qwen2 or Qwen2.5 family models without flash-attn.
     torch_dtype=torch.bfloat16,
 )
 
 
 if __name__ == "__main__":
-    data_path = "../../datas/COLD/COLD_key.json"
-    output_path = "../../datas/processed_data/COLD/csc_simple_csc_7B.json"
-    # data_path = "../../datas/ToxicloakCN/Toxic_key.json"
-    # output_path = "../../datas/processed_data/ToxicloakCN/csc_simple_csc_7B.json"
+    data_path = "../../datas/COLD/COLD_shape_key.json"
+    output_path = "../../datas/processed_data/COLD/shape_csc_simple_csc_7B.json"
+    # data_path = "../../datas/ToxicloakCN/ToxiCN_shape_key.json"
+    # output_path = "../../datas/processed_data/ToxicloakCN/shape_csc_simple_csc_7B.json"
+    # data_path = "/mnt/cfs_algo_bj/workspace/maxuchen/C2TU-main/datas/Toxic_rest/Toxic_real_world.json"
+    # output_path = "../../datas/processed_data/ToxicloakCN/real_world_csc_simple_csc_7B.json"
     
     # s = "今天天琪不错"
     # ss = corrector(s)
