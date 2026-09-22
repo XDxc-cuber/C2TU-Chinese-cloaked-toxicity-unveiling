@@ -1,3 +1,5 @@
+
+
 # C2TU-Chinese-cloaked-toxicity-unveiling
 Source code of paper **Breaking the Cloak! Unveiling Chinese Cloaked Toxicity with Homophone Graph and Toxic Lexicon**
 
@@ -31,6 +33,8 @@ pip install -r requirements.txt
 
 * Download all models required in [berts/bert-base-chinese](berts/bert-base-chinese) and [llms](llms). All models can be downloaded in [Hugging Face – The AI community building the future.](https://huggingface.co/)
 
+* Set the local model paths in [berts/bert_configs.json](berts/bert_configs.json) and [llms/llm_configs.json](llms/llm_configs.json).
+
 ## Run
 
 You can simply run [test.py](test.py) to show a tiny demo.
@@ -50,6 +54,3 @@ All processed texts are shown in [datas/processed_data](datas/processed_data). Y
 ```shell
 python csc_eval.py
 ```
-
-
-
